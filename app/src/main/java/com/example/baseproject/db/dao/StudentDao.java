@@ -15,7 +15,7 @@ import java.util.List;
 public interface StudentDao {
 
     @Insert
-    void insert(Student student);
+    long insert(Student student);
 
     @Update
     void update(Student student);

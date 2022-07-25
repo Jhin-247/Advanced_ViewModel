@@ -3,10 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
-            name="student"
-            type="com.example.baseproject.db.model.Student" />
+            name="studentViewModel"
+            type="com.example.baseproject.viewmodel.MainViewModel" />
     </data>
 
     <LinearLayout
@@ -38,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
                 android:layout_weight="7"
-                android:text="@={student.name}"
+                android:text="@={studentViewModel.chosenStudent.name}"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
         </LinearLayout>
@@ -65,7 +64,7 @@
                 android:layout_margin="3dp"
                 android:layout_weight="7"
                 android:inputType="number"
-                android:text="@={student.age}"
+                android:text="@={studentViewModel.chosenStudent.age}"
                 android:textColor="@color/white"
                 android:textSize="17sp" />
         </LinearLayout>

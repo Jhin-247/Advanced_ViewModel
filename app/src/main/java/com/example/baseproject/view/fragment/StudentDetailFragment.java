@@ -21,7 +21,7 @@ public class StudentDetailFragment extends Fragment {
         mBinding = FragmentStudentDetailBinding.inflate(inflater, container, false);
         MainViewModel mainViewModel = new ViewModelProvider(requireActivity()).get(MainViewModel.class);
 
-        mBinding.setStudent(mainViewModel.getChosenStudent());
+        mBinding.setStudentViewModel(mainViewModel);
         mBinding.executePendingBindings();
 
 

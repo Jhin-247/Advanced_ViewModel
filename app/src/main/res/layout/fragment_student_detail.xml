@@ -5,8 +5,8 @@
     <data>
 
         <variable
-            name="student"
-            type="com.example.baseproject.db.model.Student" />
+            name="studentViewModel"
+            type="com.example.baseproject.viewmodel.MainViewModel" />
     </data>
 
     <LinearLayout
@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
-            android:text="@{student.displayDetailName}"
+            android:text="@{studentViewModel.chosenStudent.displayDetailName}"
             android:textColor="@color/white"
             android:textSize="17sp" />
 
@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
-            android:text="@{student.ageAsString}"
+            android:text="@{studentViewModel.chosenStudent.ageAsString}"
             android:textColor="@color/white"
             android:textSize="17sp" />
 

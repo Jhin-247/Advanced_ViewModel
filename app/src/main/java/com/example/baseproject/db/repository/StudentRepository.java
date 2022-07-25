@@ -3,6 +3,7 @@ package com.example.baseproject.db.repository;
 import android.app.Application;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.util.Log;
 
 import androidx.lifecycle.LiveData;
 
@@ -26,7 +27,10 @@ public class StudentRepository {
         HandlerThread handlerThread = new HandlerThread("insert");
         handlerThread.start();
         Handler handler = new Handler(handlerThread.getLooper());
-        handler.post(() -> studentDao.insert(student));
+        handler.post(() -> {
+            long res = studentDao.insert(student);
+            Log.i("123123123", "insert: " + res);
+        });
     }
 
     public void delete(Student student){
